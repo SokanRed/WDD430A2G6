@@ -1,6 +1,7 @@
 import { useState } from "react"
 
 
+// eslint-disable-next-line react/prop-types
 export function NewTodoForm({ onSubmit }) {
     const [newItem, setNewItem] = useState("")
 

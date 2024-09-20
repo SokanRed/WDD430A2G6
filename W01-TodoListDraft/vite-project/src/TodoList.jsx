@@ -1,5 +1,6 @@
 import { TodoItem } from "./TodoItem"
 
+// eslint-disable-next-line react/prop-types
 export function TodoList({ todos, toggleTodo, deleteTodo }) {
     return (
         <ul className="list">
