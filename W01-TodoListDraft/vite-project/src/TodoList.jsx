@@ -1,6 +1,6 @@
+import PropTypes from 'prop-types'
 import { TodoItem } from "./TodoItem"
 
-// eslint-disable-next-line react/prop-types
 export function TodoList({ todos, toggleTodo, deleteTodo }) {
     return (
         <ul className="list">
@@ -16,3 +16,15 @@ export function TodoList({ todos, toggleTodo, deleteTodo }) {
         </ul>
     )
 }
+
+TodoList.propTypes = {
+    todos: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            title: PropTypes.string.isRequired,
+            completed: PropTypes.bool.isRequired,
+        })
+    ).isRequired,
+    toggleTodo: PropTypes.func.isRequired,
+    deleteTodo: PropTypes.func.isRequired,
+};
